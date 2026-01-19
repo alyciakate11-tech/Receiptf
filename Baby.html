@@ -1,0 +1,208 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment Receipt</title>
+<style>
+    body {
+        background: #0c0f1a;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .receipt {
+        width: 360px;
+        background: #12182b;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        padding: 15px;
+    }
+
+    .alert {
+        background: linear-gradient(135deg, #2b1a1a, #1a0f0f);
+        border: 1px solid #ff8c00;
+        border-radius: 6px;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .alert strong {
+        color: #ffae42;
+    }
+
+    .section {
+        border-top: 1px solid #1f2540;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 4px 0;
+    }
+
+    .label {
+        color: #aab0d0;
+    }
+
+    .value {
+        text-align: right;
+    }
+
+    .status-ok {
+        color: #4cff7a;
+        font-weight: bold;
+    }
+
+    .status-pending {
+        color: #ffcc00;
+        font-weight: bold;
+    }
+
+    .progress {
+        margin-top: 8px;
+        background: #1f2540;
+        border-radius: 10px;
+        height: 8px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        width: 15%; /* EDIT PROGRESS HERE */
+        height: 100%;
+        background: linear-gradient(90deg, #ffcc00, #ff9900);
+    }
+
+    .total {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .btn {
+        margin-top: 15px;
+        background: #2d63ff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="receipt">
+
+    <div class="alert">
+        <strong>⚠ PAYMENT ON HOLD</strong><br>
+        Reason: This is to inform you that the payment of <strong>$5,000</strong> which was sent via bank is currently pending due to our international transaction fee policy.  
+        To process the payment, we require the settlement of the international transaction fee (<strong>$100</strong>).  
+        Unfortunately, the bank is unable to facilitate this payment due to their policy restrictions.
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <span class="label">Payment Method:</span>
+            <span class="value">Bank Transfer</span>
+        </div>
+        <div class="row">
+            <span class="label">Account Number:</span>
+            <span class="value">XXXX-6932</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <span class="label">Payment Status:</span>
+            <span class="status-ok">✔ PAYMENT APPROVED OK</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <span class="label">Money Transfer From:</span>
+        </div>
+        <div class="row">
+            <span class="label">Bank Name:</span>
+            <span class="value">Bank of America</span>
+        </div>
+        <div class="row">
+            <span class="label">Account Name:</span>
+            <span class="value">Daddy</span>
+        </div>
+        <div class="row">
+            <span class="label">Account Number:</span>
+            <span class="value">XXXX-7742</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <span class="label">Money Transferred To:</span>
+        </div>
+        <div class="row">
+            <span class="label">Account Name:</span>
+            <span class="value">SARWAT MORCOS</span>
+        </div>
+        <div class="row">
+            <span class="label">Account Number:</span>
+            <span class="value">10824189</span>
+        </div>
+        <div class="row">
+            <span class="label">Sort Code:</span>
+            <span class="value">30-96-68</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <span class="label">Transfer Amount:</span>
+            <span class="value">$5,000</span>
+        </div>
+        <div class="row">
+            <span class="label">Clearance Fee:</span>
+            <span class="value">$100</span>
+        </div>
+        <div class="row">
+            <span class="label">Promotion Discount:</span>
+            <span class="value">$0.00</span>
+        </div>
+        <div class="row total">
+            <span>Total:</span>
+            <span>$5,100</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <span class="status-ok">✨ PAYMENT APPROVED OK</span>
+        </div>
+        <div class="row">
+            <span class="label">15% DONE</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="row" style="margin-top:8px;">
+            <span class="status-pending">⏳ PAYMENT PENDING</span>
+        </div>
+        <div class="row">
+            <span class="label">Current Status:</span>
+            <span class="status-pending">PENDING TRANSFER</span>
+        </div>
+    </div>
+
+    <div class="btn">Back</div>
+
+</div>
+
+</body>
+</html>
